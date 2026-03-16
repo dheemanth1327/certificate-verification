@@ -9,7 +9,10 @@
 
 body{
 font-family:Arial;
-background:linear-gradient(135deg,#667eea,#764ba2);
+background-image:url("background.jpg");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
 height:100vh;
 display:flex;
 align-items:center;
@@ -17,14 +20,19 @@ justify-content:center;
 margin:0;
 }
 
+/* Verification card */
+
 .card{
-background:white;
+background:rgba(255,255,255,0.92);
 padding:40px;
 width:420px;
 border-radius:15px;
 text-align:center;
-box-shadow:0 10px 30px rgba(0,0,0,0.2);
+box-shadow:0 10px 30px rgba(0,0,0,0.3);
+backdrop-filter:blur(6px);
 }
+
+/* Badge animation */
 
 .badge{
 display:inline-block;
@@ -46,7 +54,7 @@ animation:pulse 1.5s infinite;
 }
 
 .valid{
-color:#2ecc71;
+color:#27ae60;
 font-size:22px;
 font-weight:bold;
 margin-top:10px;
@@ -58,10 +66,19 @@ font-size:22px;
 font-weight:bold;
 }
 
+/* Certificate details */
+
 .details{
 margin-top:20px;
 text-align:left;
+font-size:16px;
 }
+
+.details p{
+margin:6px 0;
+}
+
+/* Download button */
 
 button{
 margin-top:20px;
@@ -69,9 +86,13 @@ padding:10px 20px;
 border:none;
 background:#3498db;
 color:white;
-border-radius:5px;
+border-radius:6px;
 cursor:pointer;
 font-size:15px;
+}
+
+button:hover{
+background:#2980b9;
 }
 
 </style>
@@ -84,7 +105,9 @@ font-size:15px;
 
 <h2>Certificate Verification</h2>
 
-<div id="result">Checking certificate...</div>
+<p>Authenticity Check Portal</p>
+
+<div id="result">Verifying certificate...</div>
 
 </div>
 
